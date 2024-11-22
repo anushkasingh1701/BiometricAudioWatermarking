@@ -9,7 +9,7 @@
 EchoCrypt is an audio steganography tool designed to secure sensitive data by embedding hidden messages within audio files. Using the Least Significant Bit (LSB) coding technique, EchoCrypt conceals information in a way that is both secure and imperceptible to the human ear, making it an ideal solution for covert communication, digital watermarking, and enhanced data privacy.
 
 
-<img src="./[images/main-interface.png](https://github.com/user-attachments/assets/a5e1fd60-0b0c-4fe6-8af9-36decc35cda1)" alt="Main Interface" width="500" height="300">
+
 
 ## Key Features
 
