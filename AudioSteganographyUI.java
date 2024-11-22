@@ -18,14 +18,14 @@ public class AudioSteganographyUI extends JFrame {
     public AudioSteganographyUI() {
         // Set up frame
         setTitle("Audio Steganography");
-        setSize(600, 500);
+        setSize(600, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Create main panel with background color
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(null);
-        mainPanel.setBackground(new Color(173, 216, 230)); 
+        mainPanel.setBackground(new Color(173, 216, 230));
         add(mainPanel, BorderLayout.CENTER);
 
         // Title
@@ -86,9 +86,15 @@ public class AudioSteganographyUI extends JFrame {
 
         // Embed button
         JButton embedButton = new JButton("Embed Message");
-        embedButton.setBounds(225, 400, 150, 30);
+        embedButton.setBounds(150, 400, 130, 30);
         embedButton.addActionListener(e -> startEmbedding());
         mainPanel.add(embedButton);
+
+        // Decrypt button
+        JButton decryptButton = new JButton("Decrypt Message");
+        decryptButton.setBounds(300, 400, 150, 30);
+        decryptButton.addActionListener(e -> startDecryption());
+        mainPanel.add(decryptButton);
     }
 
     private void chooseFile() {
@@ -109,6 +115,26 @@ public class AudioSteganographyUI extends JFrame {
         // Call AudioSteganography to embed the message
         String secretMessage = secretMessageTextArea.getText();
         AudioSteganography.embedMessageInAudio(selectedFile, secretMessage);
+        JOptionPane.showMessageDialog(this, "Message embedded successfully!");
+    }
+
+    private void startDecryption() {
+        if (selectedFile == null) {
+            JOptionPane.showMessageDialog(this, "Please choose an audio file to decrypt.");
+            return;
+        }
+
+        // Call the decryption method and display the extracted message
+        String extractedMessage = decryptMessage(selectedFile);
+        if (extractedMessage != null) {
+            JOptionPane.showMessageDialog(this, "Extracted Message: " + extractedMessage);
+        } else {
+            JOptionPane.showMessageDialog(this, "No message found or error occurred.");
+        }
+    }
+
+    private String decryptMessage(File audioFile) {
+        return DecryptAudio.extractMessageFromAudio(audioFile);
     }
 
     public static void main(String[] args) {
@@ -118,3 +144,4 @@ public class AudioSteganographyUI extends JFrame {
         });
     }
 }
+
