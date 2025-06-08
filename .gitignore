@@ -1,0 +1,9 @@
+# .gitignore
+.idea/
+out/
+venv/
+venv_py311/
+*.iml
+*.class
+__pycache__/
+*.pyc
