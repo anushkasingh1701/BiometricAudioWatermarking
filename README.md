@@ -1,7 +1,5 @@
 # Secure Audio Watermarking System 🎵🔐
 
-# Secure Audio Watermarking System 🎵🔐
-
 This project provides a secure and offline method for protecting audio content ownership using invisible watermarking and two-factor authentication (2FA). Unlike traditional copyright protection systems that rely on cloud storage or centralized databases, this system embeds all ownership and licensing data directly into the audio file itself.
 
 ## Features
