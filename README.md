@@ -3,8 +3,7 @@
 This project provides a secure and offline method for protecting audio content ownership using invisible watermarking and two-factor authentication (2FA). Unlike traditional copyright protection systems that rely on cloud storage or centralized databases, this system embeds all ownership and licensing data directly into the audio file itself.
 
 ### 🔍 GUI Preview
-
-![Face verification and watermark embedding](img/project scrnshots.png)
+![Untitled design (1)](https://github.com/user-attachments/assets/214957de-f661-4928-91db-12b4a8f764d7)
 
 ## Features
 ### 🔒 Secure Metadata Embedding
